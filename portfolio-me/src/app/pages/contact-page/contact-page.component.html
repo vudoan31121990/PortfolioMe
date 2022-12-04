@@ -1,0 +1,24 @@
+<section class="slogan-container">
+    <h1 class="slogan">Get in touch.<br> Let's connect together</h1> 
+</section>
+<div class="container">
+    <form [formGroup]="formSubmit" (ngSubmit)="sendContact()">
+        <section class="form-group">
+            <label for="name">Name*: </label><br>
+            <input type="text" formControlName="name"><br>
+            <small *ngIf="name.invalid && name.touched" style="margin-top: 5px; color: red;">Name is required</small>
+        </section>
+        <section class="form-group">
+            <label for="email">Email Address*:</label><br>
+            <input type="text" formControlName="email"><br>
+            <small *ngIf="email.invalid && email.touched" style="margin-top: 5px; color: red;">Email is required</small>
+        </section>
+        <section class="form-group">
+            <label for="note">Note</label><br>
+            <textarea type="text" formControlName="note"></textarea><br>
+            <small *ngIf="note.invalid && note.touched" style="margin-top: 5px; color: red;">Note is required</small>
+        </section>
+        <button type="submit" id="submitBtn">Send</button>
+    </form>
+</div>
+
