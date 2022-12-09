@@ -1,0 +1,11 @@
+runtime: nodejs18 # or another supported version
+env: standard
+instance_class: F1
+automatic_scaling: 
+  min_idle_instances: automatic
+  max_idle_instances: automatic
+  min_pending_latency: automatic
+  max_pending_latency: automatic
+env_variables:
+  MONGO_CONN_STRING: "mongodb+srv://vudoan3112:DiWxUX82AewSG0rQ@cluster0.t9ekz.mongodb.net/Test?retryWrites=true&w=majority"
+  isProduction: true

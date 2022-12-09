@@ -46,6 +46,7 @@ export class ContactPageComponent implements OnInit, OnDestroy {
     this.subscription.push(
       this.contactService.sendContact(this.name.value, this.email.value, this.note.value).subscribe(res => {
         alert('Your contact is saved to our website.');
+        this.initializeForm();
       })
     )
   }
